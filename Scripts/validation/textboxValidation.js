@@ -11,7 +11,7 @@ function validateRequiredTextbox(elementToValidate) {
         return elementToValidate;
     }
     else {
-        if (elementToValidate.ReturnMsg != '' && elementToValidate.value) {//Show custom message for this error 
+        if (elementToValidate.ReturnMsg != '') {//Show custom message for this error 
             elementToValidate.ErrorMsg = elementToValidate.ReturnMsg;
         }
         else {
@@ -39,7 +39,7 @@ function validateIsEmailTextbox(elementToValidate) {
     }
     else {
 
-        if (elementToValidate.ReturnMsg != '' && elementToValidate.value) {//Show custom message for this error 
+        if (elementToValidate.ReturnMsg != '') {//Show custom message for this error 
             elementToValidate.ErrorMsg = elementToValidate.ReturnMsg;
         }
         else {
