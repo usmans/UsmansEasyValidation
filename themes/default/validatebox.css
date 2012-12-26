@@ -1,5 +1,5 @@
 .validatebox-invalid{
-	background:#FFFFEE url('images/validatebox_warning.png') no-repeat right 1px;
+	background:#FFFFEE url('images/validatebox_warning.png') no-repeat right 200px;
 }
 .validatebox-tip{
 	position:absolute;

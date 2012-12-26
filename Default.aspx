@@ -14,7 +14,7 @@
     <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/themes/blitzer/jquery-ui.css" rel="stylesheet" type="text/css" />
     <link href="Styles/Qtip/RoundCornerQtip.css" rel="stylesheet" type="text/css" />
   <link href="Styles/Qtip/jquery.qtip.css" rel="stylesheet" type="text/css" />
-    <link href="Styles/Qtip/jquery.qtip.min.css" rel="stylesheet" type="text/css" />
+    
     <link href="Styles/bootstrap/bootstrap.css" rel="stylesheet" type="text/css" />
    
      <link rel="stylesheet" type="text/css" href="themes/default/easyui.css">
@@ -160,6 +160,8 @@
 
          function ShowError(controlid, msg) {
 
+           
+
              $("#" + controlid).qtip(
                   {
                       target: $("#" + controlid),
@@ -179,8 +181,8 @@
                       hide: 'unfocus',
                       style: {
 
-                          tip: true, // Apply a speech bubble tip to the tooltip at the designated tooltip corner
-                          classes: 'ui-tooltip-red'
+                          tip: true // Apply a speech bubble tip to the tooltip at the designated tooltip corner
+                          , classes: "qtip-default"
 
                       }
                   });
