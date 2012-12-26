@@ -1,4 +1,7 @@
 ﻿
+
+
+
 //Entry point for validation function in javascript this function copies the validation array into a a buffer and passes it on for validation
 //once each element is validated the result is copied to the clones array as we canot modify the array we are looping on
 

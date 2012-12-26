@@ -17,7 +17,8 @@
     <link href="Styles/Qtip/jquery.qtip.min.css" rel="stylesheet" type="text/css" />
     <link href="Styles/bootstrap/bootstrap.css" rel="stylesheet" type="text/css" />
    
-     
+     <link rel="stylesheet" type="text/css" href="themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="themes/icon.css">
 
 
 
@@ -39,7 +40,7 @@
     
    <script src="Scripts/jquery/jquery-1.8.3.min.js" type="text/javascript"></script>
 <script src="Scripts/jquery/ajax/form2js.js" type="text/javascript"></script>
-
+    <script src="Scripts/easyui/jquery.easyui.min.js" type="text/javascript"></script>
     <script src="Scripts/bootstrap/bootstrap.js" type="text/javascript"></script>
     
     <script src="Scripts/jquery/ajax/jquery.toObject.js" type="text/javascript"></script>
@@ -52,7 +53,11 @@
 
      <script type="text/javascript">
 
+         $(document).ready(function () {
 
+             unloadwindow();
+         
+          });
          function test() {
 
             $('.qtip').remove();
@@ -183,17 +188,34 @@
 
          }
 
+         function loadwindows() {
 
-      
+             $('#win').window({
+                 width: 550,
+                 height: 300,
+                 modal: true
+             });  
+         
+         }
 
+         function unloadwindow() {
+
+             $('#win').window('close');
+             return false;
+         }
 
 
     </script>
 
     
+    <div style="width:400px; margin:0px auto; margin-top:40%">
+   <a id="btn" href="#"  class="btn btn-large btn-block btn-primary" onclick="loadwindows();" >Click here to start</a>  </div>
+  <div id="win" class="easyui-window" title="My Window" style="width:510px;"  
+        data-options="iconCls:'icon-save',modal:true">  
+
      <div  class="form-horizontal">
     
-     <div class="bs-docs-example" id="testdiv" style="width:500px; margin:0px auto; padding-top:200px;">
+     <div class="bs-docs-example" id="testdiv" style="width:500px; margin:0px auto; margin-top:10px;">
    
    <div class="well">
            <br />
@@ -217,6 +239,8 @@
         <input type="checkbox"> Remember me
       </label>
       <button type="submit" class="btn btn-success" onclick="test();return false;" >Sign in</button>
+    
+    
     </div>
   </div>
 
@@ -227,11 +251,8 @@
       </div>
       
       </div>
-  
-     
-    
-
-  
+   
+</div>  
     </form>
 </body>
 </html>
